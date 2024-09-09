@@ -1,0 +1,244 @@
+/* home-styles.css */
+
+/* General Styles - Maintain consistency with the site theme */
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+header, footer {
+    background-color: #FFD700; /* Yellow background */
+    color: #000; /* Black text */
+    text-align: center;
+    padding: 1em 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure <h1> in header is not styled as a link */
+header h1 {
+    font-size: 2.5em; /* Slightly larger header for better visibility */
+    margin: 0;
+    color: #000; /* Black text */
+    text-decoration: none; /* No underline */
+}
+
+/* General reset for links inside header */
+header a {
+    color: #000; /* Ensure links are black */
+    text-decoration: none; /* No underline */
+}
+
+button.menu-button {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: #000;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+button.menu-button:hover {
+    color: #FFD700; /* Yellow text on hover */
+}
+
+nav a {
+    color: #000; /* Black text */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    margin: 0 1em; /* Adjusted spacing between nav items */
+}
+
+nav a:hover {
+    color: #FFD700; /* Yellow text on hover */
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Hero Section */
+.hero {
+    background: url('_images-copy/Construction\ office.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 6em 1em; /* Increased padding for better visibility */
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+.hero p {
+    font-size: 1.3em; /* Slightly larger font for better readability */
+    margin-bottom: 1.5em;
+}
+
+.cta-button {
+    background-color: #FFD700; /* Yellow background */
+    color: #000; /* Black text */
+    text-decoration: none;
+    padding: 0.75em 2em; /* Increased padding for a better button size */
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #FFC107; /* Darker yellow on hover */
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    background-color: #f8f8f8; /* Light grey background */
+    padding: 4em 2em; /* Increased padding for better spacing */
+    text-align: center;
+}
+
+.why-choose-us h2 {
+    font-size: 2.5em;
+    margin-bottom: 1.5em; /* Increased spacing below the heading */
+    color: #000; /* Black text */
+}
+
+.why-choose-us-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em; /* Increased gap for better spacing */
+}
+
+.why-item {
+    background-color: #fff; /* White background */
+    border: 2px solid #FFD700; /* Yellow border */
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 300px; /* Adjusted max-width for better fitting */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1em; /* Increased padding for better spacing */
+}
+
+.why-item img {
+    width: 100%;
+    height: auto;
+}
+
+.why-item h3 {
+    font-size: 1.8em; /* Slightly larger font size */
+    margin: 0.5em 0;
+}
+
+.why-item p {
+    font-size: 1em;
+}
+
+/* Services Preview Section */
+.services-preview {
+    padding: 4em 2em; /* Increased padding for better spacing */
+    text-align: center;
+}
+
+.services-preview h2 {
+    font-size: 2.5em;
+    margin-bottom: 1.5em; /* Increased spacing below the heading */
+}
+
+.service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em; /* Increased gap for better spacing */
+    justify-content: center;
+}
+
+.card {
+    background-color: #fff; /* White background */
+    border: 2px solid #FFD700; /* Yellow border */
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 300px; /* Adjusted max-width for better fitting */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    text-decoration: none; /* Ensure no underline */
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    max-height: 180px;
+    object-fit: cover;
+}
+
+.card h3, .card p {
+    margin: 0.5em 0;
+    font-size: 1.5em; /* Adjusted font size for better visibility */
+    color: #000; /* Ensure text color remains black */
+}
+
+/* Remove blue underline from links in the services section */
+.service-cards a {
+    text-decoration: none; /* Remove underline */
+    color: #000; /* Ensure text color remains black */
+}
+
+/* Recent Projects Section */
+.recent-projects {
+    padding: 4em 2em; /* Increased padding for better spacing */
+    text-align: center;
+}
+
+.recent-projects h2 {
+    font-size: 2.5em;
+    margin-bottom: 1.5em; /* Increased spacing below the heading */
+}
+
+.projects-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em; /* Increased gap for better spacing */
+    justify-content: center;
+}
+
+.project-item {
+    background-color: #fff; /* White background */
+    border: 2px solid #FFD700; /* Yellow border */
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 300px; /* Adjusted max-width for better fitting */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    max-height: 200px; /* Adjusted max-height for consistency */
+    object-fit: cover;
+}
+
+.project-item h3 {
+    font-size: 1.8em; /* Slightly larger font size */
+    margin: 0.5em 0;
+}
+
+.project-item p {
+    font-size: 1em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+    .navbar a {
+        margin: 0.5em 0; /* Adjust spacing for mobile view */
+    }
+    .service-cards, .projects-gallery {
+        flex-direction: column;
+        gap: 1em; /* Adjusted gap for mobile view */
+    }
+}

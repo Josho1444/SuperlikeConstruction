@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperLike - Request a Service in Cape Town & Johannesburg</title>
+    <meta name="description" content="Request a service from SuperLike in Cape Town or Johannesburg. Whether you need construction, plumbing, renovations, or any other handy work, our team is ready to assist you.">
+    <meta name="keywords" content="request a service, construction services, plumbing, renovations, roofing, painting, electrical, carpentry, Cape Town services, Johannesburg services, SuperLike">
+    <meta property="og:title" content="SuperLike - Request a Service in Cape Town & Johannesburg">
+    <meta property="og:description" content="Get in touch with SuperLike to book a service in Cape Town or Johannesburg. We offer construction, plumbing, renovations, roofing, painting, electrical, and carpentry services.">
+    <meta property="og:url" content="https://www.yourwebsite.com/bookaservice.html">
+    <meta property="og:image" content="https://www.yourwebsite.com/_images-copy/book-a-service-banner.jpg">
+    <link rel="stylesheet" href="bookaservice-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Popup message styles */
+        .popup-message {
+            display: none;
+            position: relative;
+            padding: 10px 20px;
+            background-color: #28a745; /* Green background */
+            color: white;
+            border-radius: 5px;
+            z-index: 1000;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin-top: 10px;
+        }
+        .submit-button {
+            position: relative; /* Ensures the popup message is correctly positioned */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1>SuperLike</h1>
+            <button class="menu-button" onclick="toggleMenu()">☰</button>
+            <nav id="main-nav">
+                <a href="index.html">Home</a>
+                <a href="aboutus.html">About Us</a>
+                <a href="services.html">Services</a>
+                <a href="bookaservice.html">Book a Service</a>
+                <a href="imacontarctor.html.html">I'm A Contractor</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <h2>Book a Service</h2>
+            <p>Let SuperLike handle your construction and handy work needs in Cape Town and Johannesburg. Our professional team is here to assist you with top-quality service.</p>
+        </section>
+
+        <section class="contact-info">
+            <h2>Contact Us</h2>
+            <p>Phone: <a href="tel:+1234567890">(+27) 079 942 0436</a></p>
+            <p>Email: <a href="mailto:info@superlike.com">info.superlike.co.za@gmail.com</a></p>
+        </section>
+
+        <section class="booking-form">
+            <h2>Request a Service</h2>
+            <form id="request-service-form" action="https://docs.google.com/forms/d/e/1FAIpQLSfDZevPmruTDpbsxFHi8PSNGKVL4JphQvbv2R8cgRdNAey1aw/formResponse" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="entry.546284899" autocomplete="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="entry.63210263" autocomplete="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="entry.272358125" autocomplete="tel" required>
+                </div>
+                <div class="form-group">
+                    <label for="service">Service Needed</label>
+                    <select id="service" name="entry.1501040335" autocomplete="off" required>
+                        <option value="Construction">Construction</option>
+                        <option value="Plumbing">Plumbing</option>
+                        <option value="Renovations">Renovations</option>
+                        <option value="Roofing">Roofing</option>
+                        <option value="Painting">Painting</option>
+                        <option value="Electrical">Electrical</option>
+                        <option value="Carpentry">Carpentry</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Additional Information</label>
+                    <textarea id="message" name="entry.947564274" rows="4" autocomplete="off"></textarea>
+                </div>
+                <button type="submit" class="submit-button">Submit</button>
+
+                <!-- Popup message -->
+                <div class="popup-message" id="popup-message">Thank you! We will contact you as soon as possible!</div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 SuperLike. All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById('request-service-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Create a form data object to send in the background
+            const formData = new FormData(this);
+
+            fetch(this.action, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                // Show the popup message under the submit button
+                const popup = document.getElementById('popup-message');
+                popup.style.display = 'block';
+
+                // Hide the popup message after 3 seconds and redirect
+                setTimeout(() => {
+                    popup.style.display = 'none';
+                    window.location.href = 'bookaservice.html';
+                }, 3000);
+
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+</body>
+</html>

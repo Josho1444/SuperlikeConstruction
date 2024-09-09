@@ -1,0 +1,146 @@
+/* services-styles.css */
+
+/* General Styles - Maintain consistency */
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #333;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: #FFD700; /* Yellow background */
+    color: #000; /* Black text */
+    text-align: center;
+    padding: 1em 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+.navbar h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+button.menu-button {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: #000;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+button.menu-button:hover {
+    color: #FFD700; /* Yellow text on hover */
+}
+
+nav {
+    display: flex;
+    gap: 1.5em; /* Adds space between nav items */
+}
+
+nav a {
+    color: #000; /* Black text */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    padding: 0.5em; /* Adds padding inside each nav item */
+}
+
+nav a:hover {
+    color: #FFD700; /* Yellow text on hover */
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Services Page Specific Styles */
+
+main {
+    padding: 4em 1em;
+}
+
+.services {
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    color: #000; /* Black text */
+}
+
+.service-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+}
+
+.service-link {
+    text-decoration: none; /* Remove the underline */
+    color: inherit; /* Inherit the text color */
+}
+
+.service-item {
+    background-color: #fff; /* White background */
+    border: 2px solid #FFD700; /* Yellow border */
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.service-item img {
+    width: 100%;
+    height: auto;
+    max-height: 200px; /* Adjust the max height of images */
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+}
+
+.service-item h3 {
+    color: #000; /* Black text */
+    margin: 0.5em 0;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        display: block;
+        width: 100%;
+    }
+
+    nav a {
+        display: block;
+        margin: 0.5em 0;
+    }
+
+    .service-gallery {
+        flex-direction: column;
+    }
+}

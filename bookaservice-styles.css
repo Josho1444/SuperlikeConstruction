@@ -1,0 +1,191 @@
+/* General Styles */
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+header, footer {
+    background-color: #FFD700; /* Yellow background */
+    color: #000; /* Black text */
+    text-align: center;
+    padding: 1.5em 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+button.menu-button {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: #000;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+button.menu-button:hover {
+    color: #FFD700;
+}
+
+nav a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    margin: 0 1em;
+}
+
+nav a:hover {
+    color: #FFD700;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Hero Section */
+
+.hero {
+    background: url('_images-copy/Happy\ office\ 2.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 8em 1em;
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 1.5em;
+    letter-spacing: 1px;
+}
+
+/* Contact Info Section */
+
+.contact-info {
+    background-color: #f8f8f8;
+    padding: 4em 2em;
+    text-align: center;
+}
+
+.contact-info h2 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-info p {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.contact-info a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #FFD700;
+}
+
+/* Booking Form Section */
+
+.booking-form {
+    background-color: #fff;
+    padding: 4em 2em;
+    text-align: center;
+    position: relative; /* Ensure correct positioning for popup */
+}
+
+.booking-form h2 {
+    font-size: 2.5em;
+    margin-bottom: 1.5em;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form-group {
+    margin-bottom: 1.5em;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 1em;
+    border: 2px solid #FFD700;
+    border-radius: 8px;
+    font-size: 1em;
+    color: #333;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #FFC107;
+    outline: none;
+}
+
+.submit-button {
+    background-color: #FFD700;
+    color: #000;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative; /* Ensures the popup is positioned correctly */
+}
+
+.submit-button:hover {
+    background-color: #FFC107;
+}
+
+/* Popup message styles */
+
+.popup-message {
+    display: none; /* Hidden by default */
+    position: relative; /* Absolute positioning relative to .booking-form */
+    top: 100%; /* Positioned below the submit button */
+    left: 0;
+    padding: 10px 20px;
+    background-color: #28a745; /* Green background */
+    color: white;
+    border-radius: 5px;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+}

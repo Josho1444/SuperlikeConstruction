@@ -1,0 +1,149 @@
+/* aboutus-styles.css */
+
+/* General Styles - Maintain consistency with the site theme */
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background: url('_images-copy/Office\ desk\ 1.jpg') no-repeat center center fixed;
+    background-size: cover; /* Ensures the background image covers the entire page */
+}
+
+header, footer {
+    background-color: rgba(255, 215, 0, 0.8); /* Semi-transparent yellow background */
+    color: #000; /* Black text */
+    text-align: center;
+    padding: 1em 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+.navbar h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+button.menu-button {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: #000;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+button.menu-button:hover {
+    color: #FFD700; /* Yellow text on hover */
+}
+
+nav {
+    display: flex;
+    gap: 1.5em; /* Adds space between nav items */
+}
+
+nav a {
+    color: #000; /* Black text */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    padding: 0.5em; /* Adds padding inside each nav item */
+}
+
+nav a:hover {
+    color: #FFD700; /* Yellow text on hover */
+}
+
+footer p {
+    margin: 0;
+}
+
+/* About Us Page Specific Styles */
+
+main {
+    padding: 4em 1em;
+}
+
+.about {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 2em;
+    border-radius: 8px;
+}
+
+.about h2 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    color: #000; /* Black text */
+}
+
+.about p {
+    line-height: 1.6;
+    margin: 1em 0;
+    color: #333;
+}
+
+.team {
+    margin-top: 3em;
+}
+
+.team h3 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    color: #000; /* Black text */
+}
+
+.team-member {
+    display: inline-block;
+    width: 250px;
+    margin: 1em;
+    text-align: center;
+    background-color: #fff; /* White background */
+    border: 2px solid #FFD700; /* Yellow border */
+    border-radius: 8px;
+    padding: 1em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.team-member img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.team-member h4 {
+    color: #000; /* Black text */
+    margin: 0.5em 0;
+}
+
+.team-member p {
+    color: #666; /* Gray text */
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .team-member {
+        width: 100%;
+        margin: 1em 0;
+    }
+}
